@@ -17,8 +17,7 @@ class KPI(models.Model):
         max_value=10)
     url = models.CharField(
         _('url'),
-        help_text=_("URL used when clicking on the indicator. Should show " +
-                    "supporting data or more information"),
+        help_text=_("URL used when clicking on the indicator."),
         max_length=200,
         blank=True,
         null=True)
