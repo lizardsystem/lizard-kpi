@@ -2,13 +2,26 @@
 
 {% block title %}{{ title }}{% endblock %}
 
+
+{% block head-extras %}
+<script src="{{ STATIC_URL }}raphaeljs/raphael.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{ STATIC_URL }}lizard_kpi/horizontal.js" type="text/javascript" charset="utf-8"></script>
+<link type="text/css"
+      href="{{ STATIC_URL }}lizard_kpi/lizard_kpi.css"
+      rel="stylesheet"
+      media="screen, projection" />
+{% endblock head-extras %}
+
+
 {% block content %}
 <div id="textual" class="kpi_gauges">
   <h1>{{ title }}</h1>
   {% for gauge in gauges %}
   <h2><a url="{{ gauge.url }}">{{ gauge.name }}</a></h2>
-  <div>Value: {{ gauge.value }}</div>
+  <div class="horizontal-gauge"
+       data-value="{{ gauge.value }}"></div>
   {% endfor %}
 </div>
+
 
 {% endblock %}
