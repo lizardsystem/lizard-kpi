@@ -12,9 +12,7 @@ class KPI(models.Model):
         blank=True)
     value = models.IntegerField(
         help_text=_("Value of the indicator (1 bad - 10 good)."),
-        default=1,
-        min_value=1,
-        max_value=10)
+        default=1)
     url = models.CharField(
         _('url'),
         help_text=_("URL used when clicking on the indicator."),
