@@ -5,6 +5,7 @@
 
 {% block head-extras %}
 <script src="{{ STATIC_URL }}raphaeljs/raphael.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{ STATIC_URL }}raphaelgauge/raphael.gauge.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{ STATIC_URL }}lizard_kpi/horizontal.js" type="text/javascript" charset="utf-8"></script>
 <link type="text/css"
       href="{{ STATIC_URL }}lizard_kpi/lizard_kpi.css"
@@ -14,12 +15,17 @@
 
 
 {% block content %}
-<div id="textual" class="kpi_gauges">
+<div id="textual"
+     class="kpi_gauges"
+     data-gauge-image="{{ STATIC_URL }}lizard_kpi/fuel_gauge.png"
+     data-arrow-image="{{ STATIC_URL }}lizard_kpi/fuel_gauge_arrow.png">
   <h1>{{ title }}</h1>
   {% for gauge in gauges %}
-  <h2><a url="{{ gauge.url }}">{{ gauge.name }}</a></h2>
-  <div class="horizontal-gauge"
-       data-value="{{ gauge.value }}"></div>
+  <div class="floating-gauge-box">
+    <h2><a href="{{ gauge.url }}">{{ gauge.name }}</a></h2>
+    <div class="fuel-gauge"
+         data-value="{{ gauge.value }}"></div>
+  </div>
   {% endfor %}
 </div>
 

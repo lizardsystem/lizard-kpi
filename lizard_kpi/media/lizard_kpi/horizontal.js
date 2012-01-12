@@ -47,8 +47,36 @@ function initialize_horizontal_gauges() {
 }
 
 
+function initialize_fuel_gauges() {
+  var gauge_image = $(".kpi_gauges").attr("data-gauge-image");
+  var arrow_image = $(".kpi_gauges").attr("data-arrow-image");
+
+  $(".fuel-gauge").each(function() {
+    // Defaults.
+    var height = 300;
+    var width = 300;
+    // Init raphael.
+    var canvas = Raphael(this, width, height);
+
+    // Gauge is from southwest to southeast.
+    var gauge = canvas.gauge(-45, 225);
+    // Attach background to gauge with x=150 and y=150 center point
+    gauge.bg(canvas.image(gauge_image, 0, 0, 300, 300), [150, 150])
+    // Attach pointer to gauge with x=130 and y=10 center point
+    gauge.pointer(canvas.image(arrow_image, 0, 0, 150, 20), [130, 10]);
+
+    // Move pointer (in percentage) without animation.
+    gauge.move(50, false);
+    // And now to the right value *with* animation.
+    var value = $(this).attr('data-value');
+    var percentage = value / 10 * 100;
+    gauge.move(percentage, true);
+  });
+}
+
 
 
 $(document).ready(function () {
   initialize_horizontal_gauges();
+  initialize_fuel_gauges();
 });
