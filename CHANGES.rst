@@ -5,7 +5,7 @@ Changelog of lizard-kpi
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added sidebar text.
 
 
 0.1 (2012-01-13)
