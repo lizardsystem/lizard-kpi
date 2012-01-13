@@ -2,7 +2,7 @@ Changelog of lizard-kpi
 ===================================================
 
 
-0.1 (unreleased)
+0.1 (2012-01-13)
 ----------------
 
 - Initial version to try out the concept.
