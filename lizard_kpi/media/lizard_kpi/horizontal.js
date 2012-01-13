@@ -69,7 +69,8 @@ function initialize_fuel_gauges() {
     gauge.move(50, false);
     // And now to the right value *with* animation.
     var value = $(this).attr('data-value');
-    var percentage = value / 10 * 100;
+    // Value is from 1 to 10, so subtract 1 and divide by 9.
+    var percentage = (value - 1) / 9 * 100;
     gauge.move(percentage, true);
   });
 }
