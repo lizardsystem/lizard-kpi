@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-11 09:09-0600\n"
+"POT-Creation-Date: 2012-01-13 05:04-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,14 +26,14 @@ msgstr "Naam"
 msgid "Value of the indicator (1 bad - 10 good)."
 msgstr "Waarde van de KPI (1 slecht - 10 goed)."
 
-#: models.py:19
+#: models.py:17
 msgid "url"
 msgstr "url"
 
-#: models.py:20
+#: models.py:18
 msgid "URL used when clicking on the indicator."
 msgstr "URL die gebruikt wordt wanneer je op de KPI klikt."
 
-#: views.py:10
+#: views.py:12
 msgid "Key performance indicators"
-msgstr "Key performance indicatoren"
+msgstr "Key performance indices"
