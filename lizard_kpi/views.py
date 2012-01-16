@@ -6,6 +6,11 @@ from django.utils.translation import ugettext as _
 from lizard_kpi.models import KPI
 
 
+def kpi_pages(request):
+    """Render page that lists all KPI pages."""
+
+
+
 def gauges(request):
     """Render page with the KPI gauges."""
     template_name = 'lizard_kpi/gauges.html'
