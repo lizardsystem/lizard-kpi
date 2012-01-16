@@ -1,6 +1,6 @@
 {% extends "lizard_ui/lizardbase.html" %}{% load i18n %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}{{ page.name }}{% endblock %}
 
 
 {% block head-extras %}
@@ -16,9 +16,9 @@
 
 {% block sidebar %}
 <div class="sidebarbox sidebarbox-stretched">
-  <h2>{{ title }}</h2>
+  <h2>{{ page.name }}</h2>
   <p>
-    Key Performance Indices voor rioolbeheer Gemeente Alkmaar.
+    {{ page.description }}
   </p>
 </div>
 {% endblock %}
@@ -29,6 +29,7 @@
      class="kpi_gauges"
      data-gauge-image="{{ STATIC_URL }}lizard_kpi/fuel_gauge.png"
      data-arrow-image="{{ STATIC_URL }}lizard_kpi/fuel_gauge_arrow.png">
+  <h1>{{ page.name }}</h1>
   {% for gauge in gauges %}
   <div class="floating-gauge-box">
     <h2><a href="{{ gauge.url }}">{{ gauge.name }}</a></h2>

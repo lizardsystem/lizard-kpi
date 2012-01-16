@@ -1,4 +1,5 @@
 # (c) Nelen & Schuurmans.  GPL licensed, see LICENSE.txt.
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -11,7 +12,7 @@ class KPIPage(models.Model):
         null=True,
         blank=True)
     slug = models.CharField(
-        _('name'),
+        _('slug'),
         max_length=40,
         null=True,
         blank=True,
@@ -23,12 +24,15 @@ class KPIPage(models.Model):
         help_text=_("Extra text shown in sidebar."))
 
     class Meta:
-        ordering = ("name",)
         verbose_name = _('Page with KPI gauges')
         verbose_name_plural = _('Pages with KPI gauges')
 
     def __unicode__(self):
         return self.name
+
+    def get_absolute_url(self):
+        """Return url to the page."""
+        return reverse('lizard_kpi_gauges', kwargs={'page': self.slug})
 
 
 class KPI(models.Model):
@@ -62,7 +66,7 @@ class KPI(models.Model):
         default=1)
 
     class Meta:
-        ordering = ("kpi_page", "order",)
+        ordering = ['order']
         verbose_name = _('Key performance indicator')
         verbose_name_plural = _('Key performance indicators')
 

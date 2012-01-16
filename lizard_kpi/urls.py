@@ -13,8 +13,11 @@ urlpatterns = patterns(
     '',
     (r'^admin/', include(admin.site.urls)),
     url(r'^$',
+        lizard_kpi.views.kpi_pages,
+        name="lizard_kpi_pages"),
+    url(r'^(?P<page>.+)/$',
         lizard_kpi.views.gauges,
-        name="lizard_gauges_gauges"),
+        name="lizard_kpi_gauges"),
     )
 #urlpatterns += debugmode_urlpatterns()
 # ^^^ TODO. Lizard 3.0...
