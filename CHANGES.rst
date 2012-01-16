@@ -2,7 +2,7 @@ Changelog of lizard-kpi
 ===================================================
 
 
-0.3 (unreleased)
+0.3 (2012-01-16)
 ----------------
 
 - Added KPI page that groups KPIs. You can now have more than one KPI page.
