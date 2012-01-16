@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-13 05:04-0600\n"
+"POT-Creation-Date: 2012-01-16 05:15-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: models.py:9
+#: models.py:10 models.py:41
 msgid "name"
 msgstr "Naam"
 
-#: models.py:14
+#: models.py:15
+msgid "slug"
+msgstr "URL fragment"
+
+#: models.py:19
+msgid "Identificator used in the url."
+msgstr "Fragment dat in de URL gebruikt wordt"
+
+#: models.py:21
+msgid "description"
+msgstr "omschrijving"
+
+#: models.py:24
+msgid "Extra text shown in sidebar."
+msgstr "Extra tekst die aan de zijkant getoond wordt."
+
+#: models.py:27
+msgid "Page with KPI gauges"
+msgstr "Pagina met KPI's"
+
+#: models.py:28
+msgid "Pages with KPI gauges"
+msgstr "Pagina's met KPI's"
+
+#: models.py:45
+msgid "Title shown above gauge."
+msgstr "Titel die boven de meter getoond wordt"
+
+#: models.py:47
+msgid "value"
+msgstr "waarde"
+
+#: models.py:48
 msgid "Value of the indicator (1 bad - 10 good)."
 msgstr "Waarde van de KPI (1 slecht - 10 goed)."
 
-#: models.py:17
+#: models.py:51
 msgid "url"
 msgstr "url"
 
-#: models.py:18
+#: models.py:52
 msgid "URL used when clicking on the indicator."
 msgstr "URL die gebruikt wordt wanneer je op de KPI klikt."
 
-#: views.py:12
+#: models.py:59
+msgid "KPI page on which we're shown."
+msgstr "KPI pagina waaropp we getoond worden."
+
+#: models.py:64
+msgid "order"
+msgstr "volgorde"
+
+#: models.py:65
+msgid "Relative order on KPI page."
+msgstr "Relative volgorde op de KPI pagina"
+
+#: models.py:70
+msgid "Key performance indicator"
+msgstr "Key performance indicator"
+
+#: models.py:71 views.py:14
 msgid "Key performance indicators"
 msgstr "Key performance indices"
