@@ -34,3 +34,4 @@ src
 
 # Ignore generated apache config files
 etc/*.apache.conf
+.DS_Store
