@@ -5,7 +5,7 @@ Changelog of lizard-kpi
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Added smaller 200x200 fuel gauges.
 
 
 0.3 (2012-01-16)
