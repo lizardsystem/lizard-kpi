@@ -53,17 +53,18 @@ function initialize_fuel_gauges() {
 
   $(".fuel-gauge").each(function() {
     // Defaults.
-    var height = 300;
-    var width = 300;
+    var height = 200;
+    var width = 200;
     // Init raphael.
     var canvas = Raphael(this, width, height);
 
     // Gauge is from southwest to southeast.
     var gauge = canvas.gauge(-45, 225);
-    // Attach background to gauge with x=150 and y=150 center point
-    gauge.bg(canvas.image(gauge_image, 0, 0, 300, 300), [150, 150])
-    // Attach pointer to gauge with x=130 and y=10 center point
-    gauge.pointer(canvas.image(arrow_image, 0, 0, 150, 20), [130, 10]);
+    // Attach background to gauge with x=100 and y=100 center point
+    gauge.bg(canvas.image(gauge_image, 0, 0, 200, 200), [100, 100])
+    // Attach pointer to gauge with x=87 and y=6 center point
+    // Old 300x300: x=130 and y=10 center point
+    gauge.pointer(canvas.image(arrow_image, 0, 0, 100, 13), [87, 6]);
 
     // Move pointer (in percentage) without animation.
     gauge.move(50, false);
